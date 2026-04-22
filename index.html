@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neso</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <script defer src="scripts/app.js"></script>
-</head>
-<body>
-  
-     <header class="header">
+    <script defer src="scripts/notification.js"></script>
+  </head>
+  <body>
+    <header class="header">
       <nav class="nav">
-        <img src="media/logo_NESO.svg" alt="logo_neso" class="logo">
+        <img src="media/logo_NESO.svg" alt="logo_neso" class="logo" />
         <button class="hamburger"></button>
         <ul class="nav-list">
           <li><a href="#">Produto.</a></li>
@@ -20,41 +20,197 @@
         </ul>
         <ul class="nav-list">
           <li><a class="btn" href="#">Entrar</a></li>
-          <li><a class="btn-cta" href="#">Fale com a nossa equipe de vendas.</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="hero">
       <div class="title-box">
-        <h1>O dinheiro perdido da sua escola, de volta ao caixa.</h1>
+        <h1>
+          O <b class="cta">dinheiro</b> perdido, de <br />
+          volta ao caixa.
+        </h1>
       </div>
 
       <div class="grapic-box">
         <div class="text-box">
-          <h2>Quanto pode <b>recuperar</b> com a Neso?</h2>
-          <div class="line"></div>
-          <p>é sobre quanto dinheiro está a deixar <br> na mesa.</p>
-          <a class="btn-cta" href="#">Descubra.</a>
+          <div class="text">
+            <h2>Quanto pode <b>recuperar</b> com a Neso?</h2>
+            <div class="line"></div>
+            <p>
+              é sobre quanto <b>dinheiro</b> está a <br />
+              deixando de ganhar
+            </p>
+          </div>
+          <a class="btn bd" href="#">Descubra.</a>
         </div>
         <div class="grapic">
           <div class="bar-box">
-            <p><i>R$ <b class="blur">568,00</b></i></p>
+            <p>
+              <i>R$ <b class="blur">568,00</b></i>
+            </p>
             <div class="bar1"></div>
           </div>
           <div class="bar-box">
-            <p><i>R$ <b class="blur">1.899,99</b></i></p>
+            <p>
+              <i>R$ <b class="blur">1.899,99</b></i>
+            </p>
             <div class="bar2"></div>
           </div>
           <div class="bar-box">
-            <p><i>R$ <b class="blur">4.799,99</b></i></p>
+            <p>
+              <i>R$ <b class="blur">4.799,99</b></i>
+            </p>
             <div class="bar3"></div>
           </div>
         </div>
-
       </div>
     </section>
-    
-    
-</body>
+
+    <section class="workflow">
+      <div class="title-box">
+        <h1 style="color: #f5f5f7">
+          Diga <b class="cta">adeus</b> à inadimplência.
+        </h1>
+      </div>
+      <div class="grapic-box">
+        <div class="text-box">
+          <section class="steps-section">
+            <div class="steps-grid">
+              <div class="step-card">
+              
+                <h3 class="step-title"><i>Arraste e solte.</i></h3>
+                <p class="step-text">
+                  Exporte sua planilha (CSV ou Excel) do seu sistema atual e
+                  suba no Neso em segundos.
+                </p>
+              </div>
+
+              <div class="step-card">
+               
+                <h3 class="step-title"><i>Nós processamos.</i></h3>
+                <p class="step-text">
+                  Nossa inteligência organiza os dados, calcula o risco de cada
+                  aluno e prepara as cobranças.
+                </p>
+              </div>
+
+              <div class="step-card">
+               
+                <h3 class="step-title"><i>Você recupera.</i></h3>
+                <p class="step-text">
+                  Links de pagamento automáticos são gerados e o dinheiro começa
+                  a voltar para o caixa.
+                </p>
+              </div>
+            </div>
+          </section>
+          <div class="text"></div>
+        </div>
+        <div class="grapic">
+          <div class="perspective-container">
+            <div class="table-3d-card">
+              <p>relatorio_inadimplencia_março.csv</p>
+              <br />
+              <table class="minimal-table">
+                <thead>
+                  <tr>
+                    <th>Aluno</th>
+                    <th>CPF</th>
+                    <th>Valor</th>
+                    <th>Vencimento</th>
+                    <th>Faltas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aluno 1</td>
+                    <td>101.001...</td>
+                    <td>R$ 255,48</td>
+                    <td>02/03</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Aluno 8</td>
+                    <td>108.008...</td>
+                    <td>R$ 718,00</td>
+                    <td>09/03</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Aluno 13</td>
+                    <td>113.013...</td>
+                    <td>R$ 984,53</td>
+                    <td>14/03</td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td>Aluno 20</td>
+                    <td>120.020...</td>
+                    <td>R$ 360,36</td>
+                    <td>21/03</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>Aluno 35</td>
+                    <td>135.035...</td>
+                    <td>R$ 1.425,20</td>
+                    <td>06/03</td>
+                    <td>11</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recovery-scene">
+      <div class="bg-blob blob-1"></div>
+      <div class="bg-blob blob-2"></div>
+      <div class="bg-blob blob-3"></div>
+
+      <div class="content-container">
+        
+
+        <div class="visual-column">
+          <div class="total-card glass-panel">
+            <div class="total-header">
+              <span class="total-label">Total Recuperado Hoje:</span>
+              <button
+                id="toggleView"
+                class="eye-btn"
+                aria-label="Mostrar/Esconder Valor"
+              >
+                <svg
+                  class="eye-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <line
+                    id="eyeSlash"
+                    x1="1"
+                    y1="1"
+                    x2="23"
+                    y2="23"
+                    stroke-width="2"
+                  ></line>
+                </svg>
+              </button>
+            </div>
+            <div id="totalValue" class="total-amount blurred">R$ 500,00</div>
+            <span id="instruct" class="instruct-text"
+              >Clique no olho para ver seu dinheiro recuperado →</span
+            >
+          </div>
+
+          <div id="notifContainer" class="notif-stream-container"></div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

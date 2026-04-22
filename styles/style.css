@@ -1,53 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #F5F5F7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: auto;
+  background-color: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
 }
 
 h1 {
-    font-size: 2.6rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-
-
-h1, h2, h3 {
-     font-family: "Raleway", sans-serif;
-     color: #1d1d1d;
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #1d1d1d;
 }
 
-a, p, span {
+a,
+p,
+span {
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
   transition: 200ms;
   color: #000;
-  font-size: 1rem;
+  font-size: 14px;
 }
-
-
 
 a:hover {
   color: #00000053;
 }
-
 
 .header {
   width: 70%;
@@ -58,7 +57,7 @@ a:hover {
   max-width: 1280px;
   height: 70px;
   margin-inline: auto;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,8 +73,6 @@ b {
   font-weight: bold;
 }
 
-
-
 .logo:hover {
   filter: opacity(0.8);
 }
@@ -90,17 +87,16 @@ b {
   color: #4ca885;
 }
 
-
 .hero {
   width: 100%;
-  background: linear-gradient(to top, #000, #e5e5e5, #F5F5F7, #F5F5F7);
+  background: linear-gradient(to top, #000, #e5e5e5, #f5f5f7, #f5f5f7);
   height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 10vh;
+  gap: 5vh;
 }
 
 .title-box {
@@ -108,7 +104,6 @@ b {
   h1 {
     text-align: left;
   }
-  
 }
 
 .grapic-box {
@@ -119,7 +114,7 @@ b {
 }
 
 .blur {
-  filter: blur(5px); 
+  filter: blur(5px);
 }
 
 .text-box {
@@ -131,17 +126,26 @@ b {
   justify-content: space-between;
 
   & h2 {
-    max-width: 60%;
     font-weight: 400;
   }
 
   & a {
     max-width: 100px;
   }
+
+  & p {
+    font-size: 20px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
 }
 
 .line {
-  width: 50%;
+  width: 80%;
   height: 0.1rem;
   background: #00000076;
 }
@@ -186,7 +190,6 @@ b {
   border: 1px solid black;
 }
 
-
 .btn {
   padding: 10px 25px;
   border-radius: 60px;
@@ -194,25 +197,14 @@ b {
   align-items: center;
   justify-content: center;
   background-color: #000;
-  color: #F5F5F7;
+  color: #f5f5f7;
   transition: 200ms;
 }
 
-.btn-cta {
-  padding: 10px 25px;
-  border-radius: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4ca885;
-  color: #F5F5F7;
-  transition: 200ms;
+.btn:hover {
+  transform: scale(1.1);
+  color: #4ca885;
 }
-
-.btn:hover, .btn-cta:hover {
-  filter: opacity(0.6);
-}
-
 
 .hamburger {
   display: none;
@@ -232,6 +224,468 @@ b {
   margin-top: 5px;
   position: relative;
   transition: 0.3s;
+}
+
+.workflow {
+  width: 100%;
+  background: radial-gradient(
+    58.69% 43.16% at 50% 87.61%,
+    #4ca885 0%,
+    rgb(0, 0, 0) 100%
+  );
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 5vh;
+}
+
+.perspective-container {
+  perspective: 1200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.table-3d-card {
+  background: linear-gradient(to bottom, #4ca885, #4ca885, #63d8ac);
+  border: 2px solid #000;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  transform: rotateY(-15deg) rotateX(10deg) rotateZ(2deg);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.table-3d-card:hover {
+  transform: rotateY(-5deg) rotateX(5deg) rotateZ(0deg) scale(1.02);
+}
+
+.minimal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+.minimal-table th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  opacity: 0.7;
+}
+
+.minimal-table td {
+  font-size: 13px;
+  padding: 12px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.minimal-table tr:last-child td {
+  border-bottom: none;
+}
+
+.steps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.step-number {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4ca885;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+
+.step-text,
+.step-title {
+  color: #f5f5f7 !important;
+}
+
+.step-title {
+  margin-bottom: 10px;
+}
+
+:root {
+  --neso-black: #111827;
+  --neso-green: #10b981; /* Seu Verde Top */
+  --text-gray: #4b5563;
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+.recovery-scene {
+  position: relative;
+  width: 70%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background-color: var(--neso-green);
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background-color: #3b82f6; /* Azul sutil */
+  bottom: -50px;
+  left: 10%;
+}
+
+.blob-3 {
+  width: 200px;
+  height: 200px;
+  background-color: #d1d5db; /* Cinza sutil */
+  top: 30%;
+  left: 40%;
+}
+
+/* Grid Principal */
+.content-container {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Coluna Texto */
+.text-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-badge {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neso-green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.main-title {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.main-subtitle {
+  font-size: 18px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+/* Botão CTA (Padrão Neso que definimos) */
+.cta-button {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: var(--neso-black);
+  color: #ffffff;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow:
+    0 4px 14px 0 rgba(0, 0, 0, 0.1),
+    0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.cta-button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Coluna Visual (As Notificações) */
+.visual-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 600px; /* Altura fixa para o stream */
+  position: relative;
+}
+
+/* Padrão Glassmorphism (iOS) */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Card do Total */
+.total-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 20;
+}
+
+.total-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+}
+
+.total-amount {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  transition: filter 0.5s ease;
+}
+
+/* O Gatilho Mental do Borrão */
+.total-amount.blurred {
+  filter: blur(15px);
+  pointer-events: none; /* Não copiar texto borrado */
+}
+
+.instruct-text {
+  font-size: 13px;
+  color: var(--neso-green);
+  font-weight: 500;
+}
+
+/* Botão Olho */
+.eye-btn {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.eye-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--neso-black);
+}
+
+.eye-icon {
+  width: 22px;
+  height: 22px;
+}
+
+#eyeSlash {
+  display: block; /* Começa "cortado" */
+}
+
+.eye-open #eyeSlash {
+  display: none; /* Remove o corte quando aberto */
+}
+
+/* Stream de Notificações */
+.notif-stream-container {
+  flex: 1;
+  overflow: hidden; /* Corta notificações antigas que sobem */
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse; /* Novas entram no topo e empurram antigas */
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+/* Card de Notificação Estilo iOS */
+.notification-card {
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 380px;
+  margin-left: auto; /* Alinha à direita */
+
+  /* Padrão Glass */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+
+  /* Animação de Entrada e Saída (Caindo e Sumindo) */
+  animation:
+    notif-enter 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards,
+    notif-exit 0.6s cubic-bezier(0.4, 0, 1, 1) 6s forwards; /* Começa a sair após 6s */
+
+  transform-origin: top right;
+  will-change: transform, opacity;
+}
+
+/* Conteúdo Notificação */
+.notif-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--neso-green);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.money-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.notif-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.notif-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neso-black);
+}
+
+.notif-text {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.notif-name {
+  font-weight: 600;
+  color: var(--neso-black);
+}
+
+.notif-amount {
+  font-weight: 700;
+  color: var(--neso-green);
+}
+
+/* Keyframes Animações iOS */
+
+/* Entrada: Cai de cima e expande sutilmente */
+@keyframes notif-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Saída: Sobe e esvanece (fade-out) */
+@keyframes notif-exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .header {
+    width: 90%;
+  }
+
+  .title-box {
+    width: 90%;
+  }
+  .grapic-box {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .text-column {
+    align-items: center;
+  }
+  .main-title {
+    font-size: 42px;
+  }
+  .visual-column {
+    height: 500px;
+    align-items: center;
+  }
+  .total-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .notif-stream-container {
+    align-items: center;
+    width: 100%;
+  }
+  .notification-card {
+    width: calc(100% - 40px);
+    max-width: 380px;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 750px) {
