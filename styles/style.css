@@ -23,6 +23,10 @@ h1 {
   font-size: 3rem;
 }
 
+.hero h1 {
+    max-width: 70%;
+}
+
 h2 {
   font-size: 2rem;
 }
@@ -54,10 +58,9 @@ a:hover {
 }
 
 .nav {
-  max-width: 1280px;
+  width: 100%;
   height: 70px;
   margin-inline: auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,6 +70,12 @@ a:hover {
   max-width: 40px;
   cursor: pointer;
   transition: 200ms;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
 }
 
 b {
@@ -81,6 +90,12 @@ b {
   display: flex;
   gap: 32px;
   list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile {
+  display: none !important;
 }
 
 .cta {
@@ -334,39 +349,6 @@ b {
   align-items: center;
 }
 
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
-  z-index: 1;
-}
-
-.blob-1 {
-  width: 400px;
-  height: 400px;
-  background-color: var(--neso-green);
-  top: -100px;
-  right: -100px;
-}
-
-.blob-2 {
-  width: 300px;
-  height: 300px;
-  background-color: #3b82f6; /* Azul sutil */
-  bottom: -50px;
-  left: 10%;
-}
-
-.blob-3 {
-  width: 200px;
-  height: 200px;
-  background-color: #d1d5db; /* Cinza sutil */
-  top: 30%;
-  left: 40%;
-}
-
-/* Grid Principal */
 .content-container {
   position: relative;
   z-index: 10;
@@ -378,7 +360,6 @@ b {
   align-items: center;
 }
 
-/* Coluna Texto */
 .text-column {
   display: flex;
   flex-direction: column;
@@ -410,41 +391,14 @@ b {
   max-width: 400px;
 }
 
-/* Botão CTA (Padrão Neso que definimos) */
-.cta-button {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: var(--neso-black);
-  color: #ffffff;
-  padding: 16px 32px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow:
-    0 4px 14px 0 rgba(0, 0, 0, 0.1),
-    0 2px 5px 0 rgba(0, 0, 0, 0.05);
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.cta-button:hover {
-  background-color: #000000;
-  transform: translateY(-2px);
-  box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.15),
-    0 3px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Coluna Visual (As Notificações) */
 .visual-column {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 600px; /* Altura fixa para o stream */
+  height: 600px;
   position: relative;
 }
 
-/* Padrão Glassmorphism (iOS) */
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(20px) saturate(180%);
@@ -454,7 +408,6 @@ b {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-/* Card do Total */
 .total-card {
   padding: 30px;
   display: flex;
@@ -482,10 +435,9 @@ b {
   transition: filter 0.5s ease;
 }
 
-/* O Gatilho Mental do Borrão */
 .total-amount.blurred {
   filter: blur(15px);
-  pointer-events: none; /* Não copiar texto borrado */
+  pointer-events: none;
 }
 
 .instruct-text {
@@ -494,7 +446,6 @@ b {
   font-weight: 500;
 }
 
-/* Botão Olho */
 .eye-btn {
   background: none;
   border: none;
@@ -516,34 +467,31 @@ b {
 }
 
 #eyeSlash {
-  display: block; /* Começa "cortado" */
+  display: block;
 }
 
 .eye-open #eyeSlash {
-  display: none; /* Remove o corte quando aberto */
+  display: none;
 }
 
-/* Stream de Notificações */
 .notif-stream-container {
   flex: 1;
-  overflow: hidden; /* Corta notificações antigas que sobem */
+  overflow: hidden;
   position: relative;
   display: flex;
-  flex-direction: column-reverse; /* Novas entram no topo e empurram antigas */
+  flex-direction: column-reverse;
   gap: 15px;
   padding-bottom: 20px;
 }
 
-/* Card de Notificação Estilo iOS */
 .notification-card {
   padding: 18px;
   display: flex;
   align-items: center;
   gap: 15px;
   width: 380px;
-  margin-left: auto; /* Alinha à direita */
+  margin-left: auto;
 
-  /* Padrão Glass */
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -551,16 +499,14 @@ b {
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
 
-  /* Animação de Entrada e Saída (Caindo e Sumindo) */
   animation:
     notif-enter 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards,
-    notif-exit 0.6s cubic-bezier(0.4, 0, 1, 1) 6s forwards; /* Começa a sair após 6s */
+    notif-exit 0.6s cubic-bezier(0.4, 0, 1, 1) 6s forwards;
 
   transform-origin: top right;
   will-change: transform, opacity;
 }
 
-/* Conteúdo Notificação */
 .notif-icon {
   width: 36px;
   height: 36px;
@@ -605,9 +551,6 @@ b {
   color: var(--neso-green);
 }
 
-/* Keyframes Animações iOS */
-
-/* Entrada: Cai de cima e expande sutilmente */
 @keyframes notif-enter {
   0% {
     opacity: 0;
@@ -619,7 +562,6 @@ b {
   }
 }
 
-/* Saída: Sobe e esvanece (fade-out) */
 @keyframes notif-exit {
   0% {
     opacity: 1;
@@ -631,22 +573,24 @@ b {
   }
 }
 
-/* Responsividade Mobile */
 @media (max-width: 1024px) {
   h1 {
-    font-size: 2rem;
+   font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
+
 
   .hero {
     height: auto;
+    padding: 60px 0;
   }
 
   .header {
     width: 90%;
+    justify-content: space-around;
   }
 
   .title-box {
@@ -654,10 +598,36 @@ b {
   }
   .grapic-box {
     width: 90%;
+    
+    gap: 20%;
+    justify-content: center;
     flex-direction: column;
   }
 
-  
+  .text-box {
+    height: auto;
+    width: 90%;
+    gap: 50px;
+    align-items: left;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .text {
+    gap: 20px;
+  }
+
+  .grapic {
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 5vh;
+  }
+
   .content-container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -694,6 +664,14 @@ b {
     z-index: 1;
   }
 
+  .mobile {
+    display: block !important
+  }
+
+  .web {
+    display: none;
+  }
+
   .nav-list {
     position: fixed;
     top: 0;
@@ -702,12 +680,14 @@ b {
     height: 100vh;
     clip-path: circle(100px at 90% -15%);
     transition: 1s ease-out;
-
+    z-index: 100;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    gap: 0;
-
+    gap: 50px;
+    background-color: #4ca885a1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
     pointer-events: none;
   }
 
@@ -744,6 +724,7 @@ b {
     top: 26px;
     right: 16px;
     border-top-color: transparent;
+    z-index: 101;
   }
 
   .nav.active .hamburger::before {
