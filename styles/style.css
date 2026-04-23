@@ -30,10 +30,6 @@ h1 {
   font-size: 3rem;
 }
 
-.hero h1 {
-  max-width: 70%;
-}
-
 h2 {
   font-size: 2rem;
 }
@@ -317,27 +313,36 @@ b {
 .steps-grid {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
+  max-width: 480px;
 }
 
-.step-number {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #4ca885;
-  margin-bottom: 12px;
-  letter-spacing: 0.1em;
+/* cada step */
+.step-card {
+  padding: 20px;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.step-text,
+/* título */
 .step-title {
-  color: #f5f5f7 !important;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff !important;
+  letter-spacing: -0.01em;
 }
 
-.step-title {
-  margin-bottom: 10px;
+/* texto */
+.step-text {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  line-height: 1.6;
 }
-
 :root {
   --neso-black: #111827;
   --neso-green: #10b981; /* Seu Verde Top */
@@ -580,11 +585,14 @@ b {
 }
 
 @media (max-width: 1024px) {
-  .hero h1 {
-    max-width: 100%;
+  .steps-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-
-   .perspective-container {
+  .perspective-container {
     width: 100%;
     padding: 0 10px;
   }
@@ -592,7 +600,7 @@ b {
   .table-3d-card {
     max-width: 100%;
     width: 100%;
-    transform: none; /* 👈 remove o 3D */
+
     padding: 8px;
   }
 
@@ -613,7 +621,7 @@ b {
     font-size: 10px;
     padding: 6px;
   }
-  
+
   h2 {
     font-size: 2rem;
   }
@@ -622,6 +630,7 @@ b {
   .workflow {
     height: auto;
     padding: 60px 0;
+    position: relative;
   }
 
   .header {
@@ -666,7 +675,6 @@ b {
     width: 10vw;
   }
 
-  
   .content-container {
     grid-template-columns: 1fr;
     gap: 40px;
