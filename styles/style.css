@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -17,6 +23,7 @@ body {
   justify-content: center;
   position: relative;
   height: auto;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -24,7 +31,7 @@ h1 {
 }
 
 .hero h1 {
-    max-width: 70%;
+  max-width: 70%;
 }
 
 h2 {
@@ -54,7 +61,6 @@ a:hover {
 
 .header {
   width: 70%;
-  padding-inline: 16px;
 }
 
 .nav {
@@ -574,23 +580,53 @@ b {
 }
 
 @media (max-width: 1024px) {
-  h1 {
-   font-size: 2.5rem;
+  .hero h1 {
+    max-width: 100%;
   }
 
+   .perspective-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .table-3d-card {
+    max-width: 100%;
+    width: 100%;
+    transform: none; /* 👈 remove o 3D */
+    padding: 8px;
+  }
+
+  .table-3d-card:hover {
+    transform: none; /* evita zoom bugado */
+  }
+
+  .minimal-table {
+    font-size: 10px;
+  }
+
+  .minimal-table th {
+    font-size: 8px;
+    padding: 6px;
+  }
+
+  .minimal-table td {
+    font-size: 10px;
+    padding: 6px;
+  }
+  
   h2 {
     font-size: 2rem;
   }
 
-
-  .hero {
+  .hero,
+  .workflow {
     height: auto;
     padding: 60px 0;
   }
 
   .header {
     width: 90%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .title-box {
@@ -598,7 +634,7 @@ b {
   }
   .grapic-box {
     width: 90%;
-    
+
     gap: 20%;
     justify-content: center;
     flex-direction: column;
@@ -624,10 +660,13 @@ b {
     align-items: center;
   }
 
-  .bar1, .bar2, .bar3 {
-    width: 5vh;
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 10vw;
   }
 
+  
   .content-container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -665,7 +704,7 @@ b {
   }
 
   .mobile {
-    display: block !important
+    display: block !important;
   }
 
   .web {
