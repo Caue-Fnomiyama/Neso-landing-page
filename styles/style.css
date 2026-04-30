@@ -18,7 +18,7 @@
 
   --text-1: #0a0a0a;
   --text-2: rgba(10, 10, 10, 0.769);
-  --text-3: rgba(10, 10, 10, 0.38);
+  --text-3: rgba(10, 10, 10, 0.603);
   --text-inv: #f5f5f7;
   --text-inv-2: rgba(245, 245, 247, 0.6);
 
@@ -220,7 +220,7 @@ img {
   display: inline-flex;
   align-items: center;
   font-family: "DM Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-2);
   padding: 14px 4px;
@@ -529,9 +529,10 @@ img {
   line-height: 1.3;
 }
 .bar {
-  width: 40%;
-  background: linear-gradient(to bottom, var(--green), var(--green-light));
+  width: 50%;
+  background: linear-gradient(to bottom, var(--green), var(--green-light), var(--green-light));
   border-radius: 10px 10px 4px 4px;
+  border: 1px solid #000;
   transition: height 0.8s var(--ease);
 }
 .bar-month {
@@ -586,7 +587,7 @@ img {
 .step-card {
   background: radial-gradient(
     58.69% 43.16% at 50% 87.61%,
-    #4ca88566 0%,
+    #4ca885bb 0%,
     rgb(0, 0, 0) 100%
   );
 
