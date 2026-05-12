@@ -530,59 +530,6 @@ img {
   gap: 16px;
 }
 
-.step-card {
-  background: radial-gradient(
-    58.69% 43.16% at 50% 87.61%,
-    #4ca885bb 0%,
-    rgb(0, 0, 0) 100%
-  );
-  border: 1px solid var(--border-inv);
-  border-radius: var(--r-lg);
-  padding: 32px 28px;
-  transition:
-    background 0.3s,
-    border-color 0.3s,
-    transform 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.step-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.step-card:hover {
-  transform: translateY(-4px);
-}
-.step-card:hover::before {
-  opacity: 1;
-}
-
-.step-num {
-  display: block;
-  font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--green);
-  margin-bottom: 20px;
-}
-.step-card h3 {
-  color: var(--text-inv);
-  margin-bottom: 12px;
-  font-size: 1.15rem;
-}
-.step-card p {
-  color: var(--text-inv-2);
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
 .recovery-scene {
   background: radial-gradient(
     58.69% 43.16% at 50% 87.61%,
@@ -1129,19 +1076,29 @@ img {
 .hero-visual {
   background-color: #f5f5f7;
   background-image:
-    linear-gradient(#00000021 1px, transparent 1px),
-    linear-gradient(to right, #00000020 1px, #f5f5f7 1px);
+    linear-gradient(#00000011 1px, transparent 1px),
+    linear-gradient(to right, #00000011 1px, #f5f5f7 1px);
   background-size: 20px 20px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 40px 40px 40px 40px #f5f5f7;
+  box-shadow:
+    inset 8px 8px 16px #f5f5f7,
+    inset -8px -8px 16px #f5f5f7;
 }
 
 .step-card--v2 {
-  background: rgba(0, 0, 0, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.249);
+  background-image:
+    radial-gradient(at 88% 40%, rgb(0, 0, 0) 0px, transparent 85%),
+    radial-gradient(at 49% 30%, rgb(0, 0, 0) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, rgb(0, 0, 0) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, #4ca885 0px, transparent 85%),
+    radial-gradient(at 41% 94%, #75ccaa 0px, transparent 85%),
+    radial-gradient(at 100% 99%, #4ca885 0px, transparent 85%);
+
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px #ffffff40 inset;
   border-radius: 20px;
   overflow: hidden;
   padding: 0; /* remove padding herdado */
@@ -1155,28 +1112,11 @@ img {
 /* ── Illustration container ── */
 .sv {
   height: 228px;
-  background: #000000;
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Ambient glow */
-.sv::before {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
-  height: 90px;
-  background: radial-gradient(
-    ellipse,
-    rgba(76, 168, 133, 0.07) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
 
 /* ── Body ── */
 .sv-body {
@@ -1370,6 +1310,7 @@ img {
   position: absolute;
   inset: 0;
   padding: 15px;
+  gap: 12px;
   display: flex;
   flex-direction: column;
 }
@@ -1720,4 +1661,110 @@ img {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(10, 10, 10, 0.25);
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 2px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+
+  & span {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+.icon {
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.wpp {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  background-image: url("/media/whatsapp.svg");
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: #ffffff !important;
+
+  & .p {
+    font-size: 0.9rem;
+    font-family: "DM-sans", sans-serif;
+    font-weight: 100 !important;
+    color: #ffffffb5 !important;
+  }
+}
+
+.c-boxx {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 2px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.textContent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
 }
