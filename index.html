@@ -17,7 +17,7 @@
   <body>
     <header class="header" id="header">
       <nav class="nav">
-       <img src="media/logo_NESO.svg" alt="Neso" class="logo web-only" />
+        <img src="media/logo_NESO.svg" alt="Neso" class="logo web-only" />
         <button class="hamburger" aria-label="Menu"></button>
         <ul class="nav-list">
           <img src="media/logo_NESO.svg" alt="Neso" class="logo mobile-only" />
@@ -48,111 +48,169 @@
         </div>
       </div>
 
-       <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-visual reveal reveal-delay-2">
         <div class="model">
-          <img src="media/Scene 8.png">
+          <img src="media/Scene 8.png" />
         </div>
       </div>
-
-     
     </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     Substitua sua <section class="workflow"> por este bloco
+     ═══════════════════════════════════════════════════════════ -->
 
     <section class="workflow">
       <div class="section-inner">
         <div class="section-header reveal">
-          <h3 style="color: #fff;" class="title">Diga <em>adeus</em> à inadimplência.</h3>
+          <h3 style="color: #fff" class="title">
+            Diga <em>adeus</em> à inadimplência.
+          </h3>
           <p class="section-sub">Três passos. Zero atrito. Resultado real.</p>
         </div>
 
         <div class="steps-grid">
-          <div class="step-card reveal">
-           
-            <span class="step-num">01</span>
-            <h3>Importe seus dados.</h3>
-            <p>
-              Arraste a planilha do seu sistema atual — Sponte, SophiA, Excel ou
-              CSV. Em segundos, tudo está lá. Sem digitação, sem configuração
-              técnica.
-            </p>
-          </div>
+          <!-- ── PASSO 01 ── -->
+          <div class="step-card step-card--v2 reveal" data-card="1">
+            <div class="sv">
+              <div class="i-wrap">
+                <div class="i-chip">
+                  <div class="i-ico">CSV</div>
+                  <div>
+                    <div class="i-fn">alunos_junho.csv</div>
+                    <div class="i-fs">48 registros · 12 KB</div>
+                  </div>
+                  <div class="i-tick">
+                    <svg
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="1.5,5.2 4,7.8 8.5,2" />
+                    </svg>
+                  </div>
+                </div>
 
-          <div class="step-card reveal reveal-delay-1">
-            <div class="step-mock">
-              <div class="mock-list">
-                <div class="mock-list-header">
-                  <span>Aluno</span>
-                  <span>Atraso</span>
-                  <span>Prioridade</span>
-                </div>
-                <div class="mock-list-row">
-                  <div class="mock-avatar">AS</div>
-                  <span class="mock-student-name">Ana Silva</span>
-                  <span class="mock-overdue">3 meses</span>
-                  <span class="mock-badge mock-badge--red">Urgente</span>
-                </div>
-                <div class="mock-list-row">
-                  <div class="mock-avatar">JP</div>
-                  <span class="mock-student-name">João Pereira</span>
-                  <span class="mock-overdue">1 mês</span>
-                  <span class="mock-badge mock-badge--yellow">Médio</span>
-                </div>
-                <div class="mock-list-row">
-                  <div class="mock-avatar">CM</div>
-                  <span class="mock-student-name">Carla Matos</span>
-                  <span class="mock-overdue">—</span>
-                  <span class="mock-badge mock-badge--green">Em dia</span>
+                <div class="i-tbl">
+                  <div class="i-th">
+                    <span>Responsável</span>
+                    <span>Vencimento</span>
+                    <span>Valor</span>
+                  </div>
+                  <div class="i-row">
+                    <span>Ana Lima</span><span>05/06</span><span>R$ 520</span>
+                  </div>
+                  <div class="i-row">
+                    <span>Pedro T.</span><span>05/06</span><span>R$ 750</span>
+                  </div>
+                  <div class="i-row">
+                    <span>Marcos S.</span><span>05/06</span><span>R$ 380</span>
+                  </div>
+                  <div class="i-row">
+                    <span>Julia M.</span><span>05/06</span><span>R$ 290</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <span class="step-num">02</span>
-            <h3>A IA faz o trabalho.</h3>
-            <p>
-              O Neso analisa cada aluno, calcula o risco e programa a régua
-              ideal. Lembretes por WhatsApp, SMS e e-mail saem automaticamente —
-              sem você tocar em nada.
-            </p>
+            <div class="sv-body">
+              <h3>Importe seus dados.</h3>
+              <p>
+                Conecte seu ERP ou suba uma planilha. O Neso lê tudo em
+                segundos, sem configuração.
+              </p>
+            </div>
           </div>
 
-          <div class="step-card reveal reveal-delay-2">
-            <div class="step-mock">
-              <div class="mock-payments">
-                <div class="mock-payment-row mock-payment-row--new">
-                  <div class="mock-pay-dot mock-pay-dot--pulse"></div>
-                  <div class="mock-pay-info">
-                    <span class="mock-pay-name">Roberto Alves</span>
-                    <span class="mock-pay-method">Pix · agora mesmo</span>
+          <!-- ── PASSO 02 ── -->
+          <div
+            class="step-card step-card--v2 reveal reveal-delay-1"
+            data-card="2"
+          >
+            <div class="sv">
+              <div class="c-wrap">
+                <div class="c-bubble">
+                  <div class="c-text">
+                    Olá, Ana! Sua mensalidade de
+                    <strong>R$ 520,00</strong> vence hoje. Pague agora em um
+                    clique:
                   </div>
-                  <span class="mock-pay-value">+ R$ 1.250</span>
-                </div>
-                <div class="mock-payment-row">
-                  <div class="mock-pay-dot"></div>
-                  <div class="mock-pay-info">
-                    <span class="mock-pay-name">Fernanda Lima</span>
-                    <span class="mock-pay-method">Cartão · há 4 min</span>
+                  <div class="c-paycard">
+                    <div class="c-pico">💳</div>
+                    <div style="flex: 1">
+                      <div class="c-plbl">Link de pagamento</div>
+                      <div class="c-pval">R$ 520,00 · Pix ou Cartão</div>
+                    </div>
+                    <div class="c-parr">›</div>
                   </div>
-                  <span class="mock-pay-value">+ R$ 890</span>
                 </div>
-                <div class="mock-payment-row">
-                  <div class="mock-pay-dot"></div>
-                  <div class="mock-pay-info">
-                    <span class="mock-pay-name">Marcos Souza</span>
-                    <span class="mock-pay-method">Pix · há 11 min</span>
-                  </div>
-                  <span class="mock-pay-value">+ R$ 670</span>
-                </div>
-                <div class="mock-pay-total">
-                  <span>Total hoje</span>
-                  <span class="mock-pay-total-value">R$ 2.810</span>
+                <div class="c-time">✓✓ 09:41</div>
+              </div>
+            </div>
+            <div class="sv-body">
+              <h3>A IA faz o trabalho.</h3>
+              <p>
+                Lembretes automáticos por WhatsApp, SMS e e-mail com link de
+                pagamento na mensagem.
+              </p>
+            </div>
+          </div>
+
+          <!-- ── PASSO 03 ── -->
+          <div
+            class="step-card step-card--v2 reveal reveal-delay-2"
+            data-card="3"
+          >
+            <div class="sv">
+              <div class="r-wrap">
+                <div class="r-lbl">Recuperado este mês</div>
+                <div class="r-amount" data-countup="48200">R$ 0</div>
+                <div class="r-badge">↑ +34% vs. mês anterior</div>
+                <div class="r-chart">
+                  <svg
+                    viewBox="0 0 260 70"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <linearGradient id="neso-cg" x1="0" y1="0" x2="0" y2="1">
+                        <stop
+                          offset="0%"
+                          stop-color="#4ca885"
+                          stop-opacity=".28"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#4ca885"
+                          stop-opacity="0"
+                        />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      class="chart-area"
+                      d="M0 64 C50 62,90 54,125 43 S200 18,260 7 L260 70 L0 70Z"
+                      fill="url(#neso-cg)"
+                    />
+                    <path
+                      class="chart-line"
+                      d="M0 64 C50 62,90 54,125 43 S200 18,260 7"
+                      fill="none"
+                      stroke="#4ca885"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
-            <span class="step-num">03</span>
-            <h3>Veja o dinheiro entrar.</h3>
-            <p>
-              Cada responsável recebe um link personalizado e quita com Pix ou
-              cartão em segundos. Você acompanha cada pagamento confirmado em
-              tempo real.
-            </p>
+            <div class="sv-body">
+              <h3>Veja o dinheiro entrar.</h3>
+              <p>
+                Acompanhe cada pagamento em tempo real. Inadimplência caindo,
+                mês a mês.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -389,6 +447,45 @@
       document
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      (function () {
+        const cards = document.querySelectorAll(".step-card--v2");
+        if (!cards.length) return;
+
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (!e.isIntersecting) return;
+              const card = e.target;
+              card.classList.add("sv-on");
+              // Count-up for card 3
+              const numEl = card.querySelector("[data-countup]");
+              if (numEl)
+                countUp(numEl, parseInt(numEl.dataset.countup), 1600, 350);
+              io.unobserve(card);
+            });
+          },
+          { threshold: 0.22 },
+        );
+
+        cards.forEach((c) => io.observe(c));
+
+        function countUp(el, target, dur, delay) {
+          setTimeout(() => {
+            const start = performance.now();
+            function tick(now) {
+              const t = Math.min((now - start) / dur, 1);
+              const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+              el.textContent =
+                "R$\u00a0" + Math.floor(target * ease).toLocaleString("pt-BR");
+              if (t < 1) requestAnimationFrame(tick);
+              else el.textContent = "R$\u00a0" + target.toLocaleString("pt-BR");
+            }
+            requestAnimationFrame(tick);
+          }, delay);
+        }
+      })();
     </script>
   </body>
 </html>
