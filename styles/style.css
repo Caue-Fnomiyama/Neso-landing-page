@@ -1090,28 +1090,23 @@ img {
 
 .step-card--v2 {
   background-image:
-    radial-gradient(at 88% 40%, rgb(0, 0, 0) 0px, transparent 85%),
-    radial-gradient(at 49% 30%, rgb(0, 0, 0) 0px, transparent 85%),
-    radial-gradient(at 14% 26%, rgb(0, 0, 0) 0px, transparent 85%),
-    radial-gradient(at 0% 64%, #4ca885 0px, transparent 85%),
+    radial-gradient(at 88% 40%, rgb(0, 0, 0) 0px, transparent 100%),
+    radial-gradient(at 49% 30%, rgb(0, 0, 0) 0px, transparent 100%),
+    radial-gradient(at 14% 26%, rgb(0, 0, 0) 0px, transparent 100%),
+    radial-gradient(at 0% 64%, #4ca88500 0px, transparent 85%),
     radial-gradient(at 41% 94%, #75ccaa 0px, transparent 85%),
     radial-gradient(at 100% 99%, #4ca885 0px, transparent 85%);
-
-  border-radius: 1rem;
-  box-shadow: 0px -16px 24px 0px #ffffff40 inset;
+  background-color: #000;
+  border-radius: 40px;
   border-radius: 20px;
   overflow: hidden;
-  padding: 0; /* remove padding herdado */
+  padding: 10px;
   transition: border-color 0.4s;
-}
-
-.step-card--v2:hover {
-  border-color: #4ca88559;
 }
 
 /* ── Illustration container ── */
 .sv {
-  height: 228px;
+  height: 250px;
   position: relative;
   overflow: hidden;
 }
@@ -1157,10 +1152,19 @@ img {
   align-items: center;
   gap: 9px;
   background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 10px;
-  padding: 9px 11px;
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
+  padding: 20px;
   flex-shrink: 0;
+
+  & img {
+    width: 40px;
+    height: 40px;
+
+  }
 }
 
 .i-ico {
@@ -1190,20 +1194,23 @@ img {
 }
 
 .i-tick {
-  width: 17px;
+  width: auto;
   height: 17px;
   border-radius: 50%;
-  background: #4ca885;
+  background: #4ca88500;
   flex-shrink: 0;
   margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+ 
   transform: scale(0.4);
   transition:
     opacity 0.3s,
     transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    
 }
 
 .i-tick svg {
@@ -1229,10 +1236,14 @@ img {
 
 .i-tbl {
   flex: 1;
-  background: rgba(255, 255, 255, 0.018);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
   overflow: hidden;
+  padding: 20px;
 }
 
 .i-th {
@@ -1243,11 +1254,9 @@ img {
 }
 
 .i-th span {
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 600;
-  color: #4ca885;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
+  color: #ffffff;
 }
 
 .i-row {
@@ -1266,7 +1275,7 @@ img {
   border-bottom: none;
 }
 .i-row span {
-  font-size: 10px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.42);
 }
 .i-row span:last-child {
@@ -1329,7 +1338,7 @@ img {
   height: 27px;
   border-radius: 50%;
   flex-shrink: 0;
-  background: rgba(76, 168, 133, 0.15);
+  background: rgb(76, 168, 133);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1671,8 +1680,8 @@ img {
   background: rgba(255, 255, 255, 0.035);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-top: 2px solid rgba(255, 255, 255, 0.247);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+  border-top: 1px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1682,7 +1691,7 @@ img {
 
   & span {
     position: absolute;
-    right: 15px;
+    right: 17px;
     top: 15px;
     font-size: 12px;
     color: #fff;
@@ -1718,14 +1727,14 @@ img {
 
 .textBox {
   width: calc(100% - 90px);
-  margin-left: 10px;
+  margin-left: 20px;
   color: #ffffff !important;
 
   & .p {
     font-size: 0.9rem;
     font-family: "DM-sans", sans-serif;
-    font-weight: 100 !important;
     color: #ffffffb5 !important;
+    line-height: 1;
   }
 }
 
@@ -1738,13 +1747,13 @@ img {
 }
 
 .icons {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background: rgba(255, 255, 255, 0.035);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-top: 2px solid rgba(255, 255, 255, 0.247);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+  border-top: 1px solid rgba(255, 255, 255, 0.247);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
   border-radius: 20px;
   display: flex;
   align-items: center;
