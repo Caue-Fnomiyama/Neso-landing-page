@@ -15,18 +15,10 @@
     <script defer src="scripts/notification.js"></script>
   </head>
   <body>
-    <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
     <header class="header" id="header">
       <nav class="nav">
-        <img
-          id="logoPrincipal"
-          src="media/logo_NESO.svg"
-          alt="Neso"
-          class="logo"
-        />
-
+       <img src="media/logo_NESO.svg" alt="Neso" class="logo web-only" />
         <button class="hamburger" aria-label="Menu"></button>
-
         <ul class="nav-list">
           <img src="media/logo_NESO.svg" alt="Neso" class="logo mobile-only" />
           <li><a href="#">Produto</a></li>
@@ -38,12 +30,12 @@
       </nav>
     </header>
 
-    <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
     <section class="hero">
       <div class="hero-inner">
-        <h1 class="hero-title reveal reveal-delay-1">
-          O <em>dinheiro</em> da<br />sua escola, de volta<br />ao caixa.
-        </h1>
+        <img src="media/logo_NESO.svg" alt="logo" class="logo" />
+        <h3 class="title reveal reveal-delay-1">
+          O <em>dinheiro</em> da sua escola, de volta ao caixa.
+        </h3>
         <p class="hero-sub reveal reveal-delay-2">
           Neso automatiza a cobrança escolar. Menos inadimplência,<br
             class="break-desktop"
@@ -54,100 +46,124 @@
           <a class="btn-primary" href="#">Começar agora</a>
           <a class="btn-ghost" href="#">Ver como funciona →</a>
         </div>
+      </div>
 
-        <div class="hero-metrics reveal reveal-delay-4">
-          <div class="metric">
-            <span class="metric-value">–40%</span>
-            <span class="metric-label">Inadimplência média</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric">
-            <span class="metric-value">15 min</span>
-            <span class="metric-label">Para configurar</span>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric">
-            <span class="metric-value">R$ 0</span>
-            <span class="metric-label">Para começar</span>
-          </div>
+       <div class="hero-visual reveal reveal-delay-2">
+        <div class="model">
+          <img src="media/Scene 8.png">
         </div>
       </div>
 
-      <div class="hero-visual reveal reveal-delay-2">
-        <div class="chart-card">
-          <div class="chart-header">
-            <p class="chart-label">Faturamento</p>
-          </div>
-          <div class="chart-body">
-            <div class="bar-col">
-              <span class="bar-value"
-                ><i>R$ <b class="blur">56888849</b></i></span
-              >
-              <div class="bar" style="height: 18%"></div>
-              <span class="bar-month">Jan</span>
-            </div>
-            <div class="bar-col">
-              <span class="bar-value"
-                ><i>R$ <b class="blur">1.899999</b></i></span
-              >
-              <div class="bar" style="height: 48%"></div>
-              <span class="bar-month">Fev</span>
-            </div>
-            <div class="bar-col">
-              <span class="bar-value"
-                ><i>R$ <b class="blur">4.799999</b></i></span
-              >
-              <div class="bar" style="height: 92%"></div>
-              <span class="bar-month">Mar</span>
-            </div>
-          </div>
-          <p class="chart-hint">Quanto está deixando de recuperar?</p>
-        </div>
-      </div>
+     
     </section>
 
-    <!-- ═══════════════════════════ WORKFLOW ═══════════════════════════ -->
     <section class="workflow">
       <div class="section-inner">
         <div class="section-header reveal">
-          <h2>Diga <em>adeus</em> à inadimplência.</h2>
+          <h3 style="color: #fff;" class="title">Diga <em>adeus</em> à inadimplência.</h3>
           <p class="section-sub">Três passos. Zero atrito. Resultado real.</p>
         </div>
 
         <div class="steps-grid">
           <div class="step-card reveal">
+           
             <span class="step-num">01</span>
-            <h3>Arraste e solte.</h3>
+            <h3>Importe seus dados.</h3>
             <p>
-              Exporte sua planilha (CSV ou Excel) do seu sistema atual e suba no
-              Neso em segundos.
+              Arraste a planilha do seu sistema atual — Sponte, SophiA, Excel ou
+              CSV. Em segundos, tudo está lá. Sem digitação, sem configuração
+              técnica.
             </p>
           </div>
+
           <div class="step-card reveal reveal-delay-1">
+            <div class="step-mock">
+              <div class="mock-list">
+                <div class="mock-list-header">
+                  <span>Aluno</span>
+                  <span>Atraso</span>
+                  <span>Prioridade</span>
+                </div>
+                <div class="mock-list-row">
+                  <div class="mock-avatar">AS</div>
+                  <span class="mock-student-name">Ana Silva</span>
+                  <span class="mock-overdue">3 meses</span>
+                  <span class="mock-badge mock-badge--red">Urgente</span>
+                </div>
+                <div class="mock-list-row">
+                  <div class="mock-avatar">JP</div>
+                  <span class="mock-student-name">João Pereira</span>
+                  <span class="mock-overdue">1 mês</span>
+                  <span class="mock-badge mock-badge--yellow">Médio</span>
+                </div>
+                <div class="mock-list-row">
+                  <div class="mock-avatar">CM</div>
+                  <span class="mock-student-name">Carla Matos</span>
+                  <span class="mock-overdue">—</span>
+                  <span class="mock-badge mock-badge--green">Em dia</span>
+                </div>
+              </div>
+            </div>
             <span class="step-num">02</span>
-            <h3>Nós processamos.</h3>
+            <h3>A IA faz o trabalho.</h3>
             <p>
-              Nossa inteligência organiza os dados, calcula o risco de cada
-              aluno e prepara as cobranças.
+              O Neso analisa cada aluno, calcula o risco e programa a régua
+              ideal. Lembretes por WhatsApp, SMS e e-mail saem automaticamente —
+              sem você tocar em nada.
             </p>
           </div>
+
           <div class="step-card reveal reveal-delay-2">
+            <div class="step-mock">
+              <div class="mock-payments">
+                <div class="mock-payment-row mock-payment-row--new">
+                  <div class="mock-pay-dot mock-pay-dot--pulse"></div>
+                  <div class="mock-pay-info">
+                    <span class="mock-pay-name">Roberto Alves</span>
+                    <span class="mock-pay-method">Pix · agora mesmo</span>
+                  </div>
+                  <span class="mock-pay-value">+ R$ 1.250</span>
+                </div>
+                <div class="mock-payment-row">
+                  <div class="mock-pay-dot"></div>
+                  <div class="mock-pay-info">
+                    <span class="mock-pay-name">Fernanda Lima</span>
+                    <span class="mock-pay-method">Cartão · há 4 min</span>
+                  </div>
+                  <span class="mock-pay-value">+ R$ 890</span>
+                </div>
+                <div class="mock-payment-row">
+                  <div class="mock-pay-dot"></div>
+                  <div class="mock-pay-info">
+                    <span class="mock-pay-name">Marcos Souza</span>
+                    <span class="mock-pay-method">Pix · há 11 min</span>
+                  </div>
+                  <span class="mock-pay-value">+ R$ 670</span>
+                </div>
+                <div class="mock-pay-total">
+                  <span>Total hoje</span>
+                  <span class="mock-pay-total-value">R$ 2.810</span>
+                </div>
+              </div>
+            </div>
             <span class="step-num">03</span>
-            <h3>Você recupera.</h3>
+            <h3>Veja o dinheiro entrar.</h3>
             <p>
-              Links de pagamento automáticos são gerados e o dinheiro começa a
-              voltar para o caixa.
+              Cada responsável recebe um link personalizado e quita com Pix ou
+              cartão em segundos. Você acompanha cada pagamento confirmado em
+              tempo real.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════ RECOVERY ══════════════════════════ -->
     <section class="recovery-scene">
       <div class="recovery-inner">
         <div class="recovery-text reveal">
-          <h2>Veja o <em>dinheiro</em><br />entrando em tempo real.</h2>
+          <h2 class="title">
+            Veja o dinheiro<br /><em>entrando em tempo real.</em>
+          </h2>
           <p>
             Cada pagamento confirmado aparece aqui instantaneamente. Sem espera,
             sem planilha, sem surpresa.
@@ -196,71 +212,42 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ FEATURES ══════════════════════════ -->
     <section class="features">
       <div class="section-inner">
         <div class="section-header reveal">
-          <h2>Tudo o que você precisa<br /><em>em um só lugar.</em></h2>
+          <h2 class="title">
+            Tudo o que você precisa<br /><em>em um só lugar.</em>
+          </h2>
         </div>
 
         <div class="bento-grid">
-          <div class="bento-card bento-large reveal">
-            <div class="bento-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <path
-                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                ></path>
-              </svg>
-            </div>
-            <h3>Régua de cobrança inteligente</h3>
-            <p>
-              O Neso envia lembretes amigáveis por WhatsApp, SMS e E-mail,
+          <div
+            style="background-color: #000"
+            class="bento-card bento-large reveal"
+          >
+            <h3 style="color: #fff !important">
+              Régua de cobrança inteligente
+            </h3>
+            <p style="color: #fff !important">
+              O Neso envia lembretes amigáveis por WhatsApp, SMS e e-mail,
               criando uma cadência automática de comunicação com o responsável
               financeiro — sem constrangimentos e sem trabalho manual.
             </p>
           </div>
-
-          <div class="bento-card reveal reveal-delay-1">
-            <div class="bento-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg>
-            </div>
+          <div
+            style="background-color: #fff"
+            class="bento-card reveal reveal-delay-1"
+          >
             <h3>Dashboard em tempo real</h3>
             <p>
               Acompanhe a saúde financeira da escola com métricas claras e
               previsibilidade de caixa.
             </p>
           </div>
-
-          <div class="bento-card reveal reveal-delay-2">
-            <div class="bento-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-              >
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                <line x1="1" y1="10" x2="23" y2="10"></line>
-              </svg>
-            </div>
+          <div
+            style="background-color: #4ca885"
+            class="bento-card reveal reveal-delay-2"
+          >
             <h3>Acordos flexíveis</h3>
             <p>
               Permita que os responsáveis parcelem dívidas antigas no cartão ou
@@ -271,12 +258,10 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ INTEGRATIONS ════════════════════════ -->
     <section class="integrations">
       <div class="section-inner">
         <div class="section-header reveal">
-          <span class="eyebrow">Integrações</span>
-          <h2>Conecta com o seu <em>ERP atual.</em></h2>
+          <h2 class="title">Conecta com o seu <em>ERP atual.</em></h2>
           <p class="section-sub">
             Não mude sua rotina. O Neso se adapta aos principais sistemas de
             gestão escolar ou lê suas planilhas instantaneamente.
@@ -291,12 +276,10 @@
       </div>
     </section>
 
-    <!-- ══════════════════════ TESTIMONIALS ══════════════════════════ -->
     <section class="testimonials">
       <div class="section-inner">
         <div class="section-header reveal">
-          <span class="eyebrow light">Resultados</span>
-          <h2>Escolas que já <em>recuperaram</em> o caixa.</h2>
+          <h2 class="title">Escolas que já <em>recuperaram</em> o caixa.</h2>
         </div>
         <div class="testimonial-grid">
           <div class="testimonial-card reveal">
@@ -331,12 +314,10 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════ FAQ ═══════════════════════════ -->
     <section class="faq">
       <div class="section-inner narrow">
         <div class="section-header reveal">
-          <span class="eyebrow">Dúvidas</span>
-          <h2>Perguntas <em>frequentes.</em></h2>
+          <h2 class="title">Perguntas <em>frequentes.</em></h2>
         </div>
         <div class="faq-list">
           <details class="faq-item reveal">
@@ -367,11 +348,9 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ FINAL CTA ═══════════════════════════ -->
     <section class="final-cta">
       <div class="cta-inner reveal">
-        <span class="eyebrow light">Comece hoje</span>
-        <h2>Pronto para sair<br />do <em>vermelho?</em></h2>
+        <h2 class="title">Pronto para sair<br />do <em>vermelho?</em></h2>
         <p>
           Pare de perder tempo cobrando mensalidades.<br />Deixe o Neso fazer
           isso por você.
@@ -380,7 +359,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ FOOTER ════════════════════════════ -->
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-top">
@@ -396,7 +374,6 @@
       </div>
     </footer>
 
-    <!-- Scroll reveal -->
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
