@@ -1,14 +1,14 @@
 const notificacoesData = [
   { nome: "Rafael Santos", valor: 999.99 },
-  { nome: "Mariana", valor: 1250.0 },
-  { nome: "Felipe", valor: 780.5 },
+  { nome: "Mariana Lima", valor: 1250.0 },
+  { nome: "Felipe Costa", valor: 780.5 },
   { nome: "Ana Souza", valor: 499.9 },
-  { nome: "Lucas", valor: 2100.0 },
+  { nome: "Lucas Oliveira", valor: 2100.0 },
   { nome: "Carla Dias", valor: 1150.75 },
   { nome: "Gustavo Silva", valor: 880.0 },
   { nome: "Paula Mendes", valor: 1450.2 },
   { nome: "Roberto Alves", valor: 670.45 },
-  { nome: "Sofia", valor: 1999.99 },
+  { nome: "Sofia Fernandes", valor: 1999.99 },
 ];
 
 const toggleBtn = document.getElementById("toggleView");
@@ -82,12 +82,7 @@ const criarNotificacaoHTML = (nome, valor) => {
 
   card.innerHTML = `
         <div class="notif-icon">
-            <img
-          id="logoPrincipal"
-          src="media/logo_NESO.svg"
-          alt="Neso"
-          class="logo"
-        />
+             <img src="media/logo_NESO.svg" alt="Neso" class="logo2" />
         </div>
         <div class="notif-body">
             <span class="notif-title">Pagamento Recebido</span>
