@@ -405,6 +405,7 @@ img {
 }
 
 .hero-visual {
+  width: 100%;
   position: relative;
   align-items: center;
   z-index: 1;
@@ -458,16 +459,14 @@ img {
 
 .model {
   width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
 
   & img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
   }
 
 }
@@ -1137,6 +1136,7 @@ img {
     min-height: auto;
   }
   .hero-visual {
+    width: 100vw;
     position: relative;
     display: flex;
     align-items: center;
